@@ -1,0 +1,30 @@
+version: '3.1'
+services:
+  app:
+    container_name: ecommerce
+    image: ecommerce
+    ports:
+      - "8081:8081"
+    depends_on:
+      postgresqldb:
+        condition: service_healthy
+    networks:
+      - ecommerce-net
+  postgresqldb:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=wall_street
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ecommerce-net
+networks:
+  ecommerce-net:
+    driver: bridge

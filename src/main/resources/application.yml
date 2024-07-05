@@ -1,0 +1,15 @@
+server:
+  port: 0
+  shutdown: graceful
+spring:
+  profiles:
+    active: ${ACTIVE_PROFILE:alpha}
+  application:
+    name: ecommerce
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+

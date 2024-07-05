@@ -1,0 +1,19 @@
+2024-07-05 18:13:58 [main] INFO  c.w.ecommerce.EcommerceApplication - Starting EcommerceApplication using Java 17.0.8 with PID 24848 (E:\Interview Task\ecommerce\target\classes started by User in E:\Interview Task\ecommerce)
+2024-07-05 18:13:58 [main] DEBUG c.w.ecommerce.EcommerceApplication - Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-05 18:13:58 [main] INFO  c.w.ecommerce.EcommerceApplication - The following 1 profile is active: "alpha"
+2024-07-05 18:14:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-05 18:14:01 [main] INFO  c.w.ecommerce.EcommerceApplication - Started EcommerceApplication in 3.296 seconds (process running for 3.92)
+2024-07-05 18:14:34 [http-nio-8081-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "'9'"]
+2024-07-05 18:14:45 [http-nio-8081-exec-3] INFO  c.w.e.service.EcommerceService - Retrieving wishlist for customer 1
+2024-07-05 18:19:13 [main] INFO  c.w.ecommerce.EcommerceApplication - Starting EcommerceApplication using Java 17.0.8 with PID 11916 (E:\Interview Task\ecommerce\target\classes started by User in E:\Interview Task\ecommerce)
+2024-07-05 18:19:13 [main] DEBUG c.w.ecommerce.EcommerceApplication - Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-05 18:19:13 [main] INFO  c.w.ecommerce.EcommerceApplication - The following 1 profile is active: "alpha"
+2024-07-05 18:19:16 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-05 18:19:16 [main] INFO  c.w.ecommerce.EcommerceApplication - Started EcommerceApplication in 3.498 seconds (process running for 4.224)
+2024-07-05 18:37:31 [main] INFO  c.w.ecommerce.EcommerceApplication - Starting EcommerceApplication using Java 17.0.8 with PID 14220 (E:\Interview Task\ecommerce\target\classes started by User in E:\Interview Task\ecommerce)
+2024-07-05 18:37:31 [main] DEBUG c.w.ecommerce.EcommerceApplication - Running with Spring Boot v3.3.1, Spring v6.1.10
+2024-07-05 18:37:31 [main] INFO  c.w.ecommerce.EcommerceApplication - The following 1 profile is active: "alpha"
+2024-07-05 18:37:36 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-05 18:37:37 [main] INFO  c.w.ecommerce.EcommerceApplication - Started EcommerceApplication in 6.711 seconds (process running for 8.557)
+2024-07-05 18:37:39 [http-nio-8081-exec-1] INFO  c.w.e.service.EcommerceService - Retrieving wishlist for customer 1
+2024-07-05 18:46:34 [http-nio-8081-exec-2] INFO  c.w.e.service.EcommerceService - Retrieving wishlist for customer 1

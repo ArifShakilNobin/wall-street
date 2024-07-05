@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "4781eb22-08b3-4f88-abd5-c2a29f397189",
+		"name": "Wall_street",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3179143",
+		"_collection_link": "https://planetary-resonance-701133.postman.co/workspace/BIWTA~9afdb7a5-54ae-44a0-b0d1-38135c463f82/collection/3179143-4781eb22-08b3-4f88-abd5-c2a29f397189?action=share&source=collection_link&creator=3179143"
+	},
+	"item": [
+		{
+			"name": "get Wish list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{api_url}}:{{api_port}}/api/wishlist/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get Total Sale Amount Of Current Day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{api_url}}:{{api_port}}/api/sales/today"
+			},
+			"response": []
+		},
+		{
+			"name": "get Max Sale Day In Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}:{{api_port}}/api/sales/max-day?startDate=2024-07-01&endDate=2024-07-04",
+					"host": [
+						"{{api_url}}"
+					],
+					"port": "{{api_port}}",
+					"path": [
+						"api",
+						"sales",
+						"max-day"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-07-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-07-04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get top selling items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{api_url}}:{{api_port}}/api/sales/top-items"
+			},
+			"response": []
+		},
+		{
+			"name": "get Top Selling Items In Last Month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{api_url}}:{{api_port}}/api/sales/top-items-last-month"
+			},
+			"response": []
+		}
+	]
+}
