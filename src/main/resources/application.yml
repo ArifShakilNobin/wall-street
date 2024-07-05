@@ -8,7 +8,7 @@ spring:
     name: ecommerce
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
       show-sql: true
       format_sql: true
       dialect: org.hibernate.dialect.PostgreSQLDialect

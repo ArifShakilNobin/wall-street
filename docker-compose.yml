@@ -1,30 +1,30 @@
-version: '3.1'
+version: '2'
+
 services:
   app:
-    container_name: ecommerce
-    image: ecommerce
+    build:
+      context: .
+    image: 'ecommerce:latest'
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - ACTIVE_PROFILE=alpha
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/wall_street
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_DATABASE-PLATFORM=org.hibernate.dialect.PostgreSQLDialect
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DEFAULT_SCHEMA=e_commerce
     ports:
       - "8081:8081"
-    depends_on:
-      postgresqldb:
-        condition: service_healthy
-    networks:
-      - ecommerce-net
-  postgresqldb:
-    image: postgres
-    ports:
-      - "5432:5432"
+
+  db:
+    image: 'postgres:latest'
+    container_name: db
     environment:
-      - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=wall_street
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    networks:
-      - ecommerce-net
-networks:
-  ecommerce-net:
-    driver: bridge
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
